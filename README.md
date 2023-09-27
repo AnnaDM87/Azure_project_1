@@ -13,7 +13,8 @@ This model is then compared to an Azure AutoML run.
 
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+The data is related with direct marketing campaigns of a banking institution.
+The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') subscribed.
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
 
