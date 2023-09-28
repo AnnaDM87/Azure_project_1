@@ -1,0 +1,52 @@
+2023-09-28T14:48:41.593024][GENERATOR][INFO]Trying to sample '4' jobs from the hyperparameter space
+[2023-09-28T14:48:42.1465911Z][SCHEDULER][INFO]Scheduling job, id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_0' 
+[2023-09-28T14:48:42.2930914Z][SCHEDULER][INFO]Scheduling job, id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_1' 
+[2023-09-28T14:48:42.3831550Z][SCHEDULER][INFO]Scheduling job, id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_2' 
+[2023-09-28T14:48:42.4609320Z][SCHEDULER][INFO]Scheduling job, id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_3' 
+[2023-09-28T14:48:42.419377][GENERATOR][INFO]Successfully sampled '4' jobs, they will soon be submitted to the execution target.
+[2023-09-28T14:48:42.9043472Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_0' 
+[2023-09-28T14:48:43.0249410Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_3' 
+[2023-09-28T14:48:43.0275114Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_2' 
+[2023-09-28T14:48:43.0251947Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_1' 
+[2023-09-28T14:50:11.724719][GENERATOR][INFO]Trying to sample '2' jobs from the hyperparameter space
+[2023-09-28T14:50:12.0694289Z][SCHEDULER][INFO]Scheduling job, id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_4' 
+[2023-09-28T14:50:12.140208][GENERATOR][INFO]Successfully sampled '2' jobs, they will soon be submitted to the execution target.
+[2023-09-28T14:50:12.3066145Z][SCHEDULER][INFO]Scheduling job, id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_5' 
+[2023-09-28T14:50:12.3740651Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_4' 
+[2023-09-28T14:50:12.5791573Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_5' 
+[2023-09-28T14:50:40.381444][CONTROLLER][WARNING][HDFlowDebug]The first 4 jobs have failed due to usererror. The system is cancelling the further child runs and failing the experiment. Please resolve the issues before resubmitting the experiment.
+[2023-09-28T14:50:40.381388][CONTROLLER][INFO]Experiment has been marked for cancellation.
+[2023-09-28T14:50:42.210074][GENERATOR][INFO]Trying to sample '2' jobs from the hyperparameter space
+[2023-09-28T14:50:42.7606239Z][SCHEDULER][INFO]Scheduling job, id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_7' 
+[2023-09-28T14:50:42.6677628Z][SCHEDULER][INFO]Scheduling job, id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_6' 
+[2023-09-28T14:50:42.737176][GENERATOR][INFO]Successfully sampled '2' jobs, they will soon be submitted to the execution target.
+[2023-09-28T14:50:42.9540989Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_6' 
+[2023-09-28T14:50:43.0330111Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_2695e6d6-fb22-4f99-b257-cd1444ecb878_7' 
+[2023-09-28T14:52:10.507196][CONTROLLER][WARNING]Marking the experiment for user error because initial child jobs have failed due to user error
+[2023-09-28T14:52:10.823964][CONTROLLER][WARNING]Marking the experiment for user error because initial child jobs have failed due to user error
+[2023-09-28T14:52:10.823912][CONTROLLER][INFO]Experiment has been marked for failure.
+[2023-09-28T14:52:11.211883][CONTROLLER][INFO]Experiment has been marked for failure.
+[2023-09-28T14:52:11.211944][CONTROLLER][WARNING]User errors were found in at least one of the child runs.
+[2023-09-28T14:52:12.161488][CONTROLLER][INFO]Experiment was 'ExperimentStatus.RUNNING', is 'ExperimentStatus.FAILED'.
+
+Error occurred: Execution failed. User process '/azureml-envs/azureml_7eec2c8971b9410f92147a7e257297e7/bin/python' exited with status code 1. Please check log file 'user_logs/std_log.txt' for error details. Error:     infer_column_types or _is_inference_required(set_column_types))
+  File "/azureml-envs/azureml_7eec2c8971b9410f92147a7e257297e7/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 1173, in _transform_and_validate
+    _validate_has_data(dataflow, 'Failed to validate the data.')
+  File "/azureml-envs/azureml_7eec2c8971b9410f92147a7e257297e7/lib/python3.6/site-packages/azureml/data/dataset_error_handling.py", line 68, in _validate_has_data
+    raise DatasetValidationError(error_message + '\n' + e.compliant_message, exception=e)
+azureml.data.dataset_error_handling.DatasetValidationError: DatasetValidationError:
+	Message: Failed to validate the data.
+ScriptExecutionException was caused by StreamAccessException.
+  StreamAccessException was caused by NotFoundException.
+    Found no resources for the input provided: '[REDACTED]'
+| session_id=l_01f5bafa-fd0f-492f-8525-cf1c33ebea5b
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Failed to validate the data.\nScriptExecutionException was caused by StreamAccessException.\n  StreamAccessException was caused by NotFoundException.\n    Found no resources for the input provided: '[REDACTED]'\n| session_id=l_01f5bafa-fd0f-492f-8525-cf1c33ebea5b"
+    }
+}
+
+ Marking the experiment as failed because initial child jobs have failed due to user error
