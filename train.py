@@ -65,7 +65,7 @@ def main():
     ### YOUR CODE HERE ###a
 
     model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
-    folder='.outputs'
+    folder='outputs'
     os.makedirs(folder, exist_ok=True)
     joblib.dump(value=model,filename=os.path.join(folder,'model.joblib'))
 
@@ -75,6 +75,6 @@ def main():
 if __name__ == '__main__':
     main()
 
-%tb
+
 
 
